@@ -33,10 +33,8 @@ OmicsFlow is divided into **three sub-projects**, each focusing on a specific as
 **Features:**  
 - Data preprocessing & feature selection (PCA, Lasso Regression, SHAP Analysis).  
 - ML models (XGBoost, Random Forest, SVM) for cancer classification.  
-- Visualization of gene expression patterns and clustering.  
-
-**Repo:** [🔗 GitHub: OmicsML](https://github.com/Dewey-Wang/OmicsML)  
-
+- Visualization of gene expression patterns and clustering.
+- 
 ---
 
 ### **2️⃣ SurvivalFlow: Multi-Omics Survival Analysis**
@@ -47,8 +45,6 @@ OmicsFlow is divided into **three sub-projects**, each focusing on a specific as
 - Kaplan-Meier survival analysis & Cox proportional hazards model.  
 - Use SHAP analysis to interpret feature importance in survival prediction.  
 
-**Repo:** [🔗 GitHub: SurvivalFlow](https://github.com/Dewey-Wang/SurvivalFlow)  
-
 ---
 
 ### **3️⃣ OmicsCloud: Cloud-Based Bioinformatics Pipeline**
@@ -57,10 +53,8 @@ OmicsFlow is divided into **three sub-projects**, each focusing on a specific as
 **Features:**  
 - Develop a **Snakemake / Nextflow pipeline** for reproducible analysis.  
 - Deploy containerized workflows using **Docker + Kubernetes** on AWS/GCP.  
-- Web interface for interactive data upload and visualization using **Flask / Streamlit**.  
-
-**Repo:** [🔗 GitHub: OmicsCloud](https://github.com/Dewey-Wang/OmicsCloud)  
-
+- Web interface for interactive data upload and visualization using **Flask / Streamlit**.
+- 
 ---
 
 ## **🔜 Future Enhancements**
