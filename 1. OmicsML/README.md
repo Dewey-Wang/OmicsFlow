@@ -1,8 +1,8 @@
 # 📌 OmicsML: AI-Powered Multi-Omics & Drug Target Discovery  
-*Integrating Genomics, Transcriptomics, and Metabolomics for Predictive Modeling*  
+*Integrating Transcriptomics & Proteomics for Cancer Subtyping and Drug Target Prediction*  
 
 ## **1️⃣ Overview**  
-OmicsML is a **machine learning-driven multi-omics analysis pipeline** that integrates **genomics (DNA-seq), transcriptomics (RNA-seq), proteomics, and metabolomics data** to:  
+OmicsML is an **AI-driven multi-omics analysis pipeline** that integrates **RNA-Seq (Transcriptomics) and Proteomics** to:  
 
 ✅ **Classify cancer subtypes**  
 ✅ **Identify key biomarkers**  
@@ -13,35 +13,42 @@ This project is designed as a **modular AI pipeline**, enabling seamless integra
 ---
 
 ## **2️⃣ TCGA Data Selection Criteria**  
-**To ensure high-quality multi-omics integration, we selected the following dataset:**  
+To ensure high-quality multi-omics integration, we selected the following dataset:  
 
-✅ **Project:** `TCGA-BRCA` (**Breast Cancer**)  
-✅ **Primary Site:** `breast`  
-✅ **Experimental Strategy:** `RNA-Seq`  
-✅ **Workflow Type:** `STAR - Counts`  
-✅ **Data Type:** `Gene Expression Quantification`  
-✅ **Tissue Type:** `Primary Tumor` & `Solid Tissue Normal`  
-✅ **Tumor Descriptor:** `Primary`  
+- **🩺 Project:** `TCGA-BRCA` (**Breast Cancer**)  
+- **🧬 Omics Types:** `RNA-Seq` (Transcriptomics) + `Proteomics`  
+- **🧪 Experimental Strategy:**  
+  - **RNA-Seq:** `STAR - Counts`  
+  - **Proteomics:** `CPTAC Mass Spectrometry Data`  
+- **📌 Tissue Types:**  
+  - `Primary Tumor` (Cancer Samples)  
+  - `Solid Tissue Normal` (Paired Normal from TCGA)  
+  - `GTEx Normal Tissue Control` (Independent Non-Cancerous Baseline)  
 
-📌 **Data Source:** [TCGA GDC Data Portal](https://portal.gdc.cancer.gov/)  
+📌 **Data Sources:**  
+- [TCGA GDC Data Portal](https://portal.gdc.cancer.gov/)  
+- [CPTAC Data Portal](https://cptac-data-portal.georgetown.edu/)  
+- [GTEx Portal](https://gtexportal.org/)  
 
 ---
 
 ## **3️⃣ Project Workflow**  
-OmicsML is structured into **four major phases**, ensuring an efficient, reproducible pipeline for **multi-omics analysis & drug target discovery**.
+OmicsML follows a structured pipeline with **four major phases** to enable efficient, reproducible multi-omics analysis and AI-driven biomarker discovery.
 
 ### **📥 Phase 1: Data Collection & Preprocessing (Day 1-3)**  
-- **Download RNA-Seq, proteomics, and metabolomics data** from TCGA & Metabolomics Workbench.  
+- **Download RNA-Seq & Proteomics data** from TCGA & CPTAC.  
 - **Normalize & preprocess omics data** (batch correction, missing value imputation).  
-- **Apply dimensionality reduction techniques** (PCA, UMAP).  
+- **Use PCA & UMAP for dimensionality reduction**.  
 
 ### **📊 Phase 2: Feature Engineering & Multi-Omics Integration (Day 4-5)**  
 - **Identify key biomarkers** using **Lasso regression, SHAP, and statistical tests**.  
 - **Integrate multi-omics data** using **WGCNA (Weighted Gene Co-Expression Network Analysis)** & **Canonical Correlation Analysis (CCA)**.  
-- **Extract highly correlated multi-omics features** for predictive modeling.  
+- **Extract highly correlated transcriptomic & proteomic features** for predictive modeling.  
 
 ### **🤖 Phase 3: Machine Learning for Cancer Subtyping & Drug Target Discovery (Day 6-8)**  
-- **Train AI models** (XGBoost, Random Forest, Graph Neural Networks) for **cancer classification & drug target identification**.  
+- **Train AI models** (XGBoost, Random Forest, Graph Neural Networks) for:  
+  - **Cancer subtype classification**  
+  - **Drug target identification**  
 - **Optimize hyperparameters & evaluate model performance**.  
 - **Apply Explainable AI (SHAP, LIME) to interpret results**.  
 
@@ -55,10 +62,9 @@ OmicsML is structured into **four major phases**, ensuring an efficient, reprodu
 ## **4️⃣ Data Sources**  
 | **Dataset** | **Omics Type** | **Source** |  
 |------------|--------------|------------|  
-| **TCGA-BRCA** | Genomics, Transcriptomics, Clinical | [GDC](https://portal.gdc.cancer.gov/) |  
+| **TCGA-BRCA** | Transcriptomics, Clinical | [GDC](https://portal.gdc.cancer.gov/) |  
 | **CPTAC** | Proteomics | [CPTAC Data Portal](https://cptac-data-portal.georgetown.edu/) |  
-| **Metabolomics Workbench** | Metabolomics | [MW](https://www.metabolomicsworkbench.org/) |  
-| **GTEx** | Transcriptomics (Normal Tissue Control) | [GTEx Portal](https://gtexportal.org/) |  
+| **GTEx** | Normal Tissue Transcriptomics | [GTEx Portal](https://gtexportal.org/) |  
 
 ---
 
