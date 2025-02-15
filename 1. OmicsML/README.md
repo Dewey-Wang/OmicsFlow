@@ -12,23 +12,41 @@ This project is designed as a **modular AI pipeline**, enabling seamless integra
 
 ---
 
-## **2️⃣ TCGA Data Selection Criteria**  
-To ensure high-quality multi-omics integration, we selected the following dataset:  
+## **2️⃣ Data Selection Criteria**  
+To ensure high-quality multi-omics integration, we selected the following datasets:  
 
-- **🩺 Project:** `TCGA-BRCA` (**Breast Cancer**)  
-- **🧬 Omics Types:** `RNA-Seq` (Transcriptomics) + `Proteomics`  
-- **🧪 Experimental Strategy:**  
-  - **RNA-Seq:** `STAR - Counts`  
-  - **Proteomics:** `CPTAC Mass Spectrometry Data`  
-- **📌 Tissue Types:**  
-  - `Primary Tumor` (Cancer Samples)  
-  - `Solid Tissue Normal` (Paired Normal from TCGA)  
-  - `GTEx Normal Tissue Control` (Independent Non-Cancerous Baseline)  
+- **🩺 Cancer Type:** Breast Cancer  
+- **🧬 Omics Types:** RNA-Seq (Transcriptomics) + Proteomics  
 
-📌 **Data Sources:**  
-- [TCGA GDC Data Portal](https://portal.gdc.cancer.gov/)  
-- [CPTAC Data Portal](https://cptac-data-portal.georgetown.edu/)  
-- [GTEx Portal](https://gtexportal.org/)  
+### **🔬 RNA-Seq Data (Transcriptomics)**  
+**Source:** [GDC Data Portal](https://portal.gdc.cancer.gov/)  
+
+- **Program:** CPTAC  
+- **Project:** CPTAC-2  
+- **Experimental Strategy:** **RNA-Seq**  
+- **Workflow Type:** **STAR - Counts**  
+- **Data Type:** **Gene Expression Quantification**  
+- **Primary Site:** **Breast**  
+- **Tissue Types:**  
+  - **Primary Tumor** (Cancer Samples)  
+- **Tumor Descriptor:** **Primary**  
+- **Platform:** **Illumina**  
+- **Data Format:** **TSV**  
+- **Access:** **Open**  
+
+### **🔬 Proteomics Data**  
+**Source:** [Proteomic Data Commons (PDC)](https://pdc.cancer.gov/)  
+
+- **Primary Site:** **Breast**  
+- **Disease Type:** **Breast Invasive Carcinoma**  
+- **Sample Type:** **Primary Tumor**  
+- **Data Category:** **Protein Assembly**  
+- **Access:** **Open**  
+- **Studies Selected:**  
+  - **Prospective Breast BI Proteome**  
+
+📌 **Additional Normal Tissue Control:**  
+- **GTEx Normal Tissue Transcriptomics** from the [GTEx Portal](https://gtexportal.org/)  
 
 ---
 
@@ -36,7 +54,7 @@ To ensure high-quality multi-omics integration, we selected the following datase
 OmicsML follows a structured pipeline with **four major phases** to enable efficient, reproducible multi-omics analysis and AI-driven biomarker discovery.
 
 ### **📥 Phase 1: Data Collection & Preprocessing (Day 1-3)**  
-- **Download RNA-Seq & Proteomics data** from TCGA & CPTAC.  
+- **Download RNA-Seq & Proteomics data** from TCGA, PDC, and GTEx.  
 - **Normalize & preprocess omics data** (batch correction, missing value imputation).  
 - **Use PCA & UMAP for dimensionality reduction**.  
 
@@ -62,8 +80,8 @@ OmicsML follows a structured pipeline with **four major phases** to enable effic
 ## **4️⃣ Data Sources**  
 | **Dataset** | **Omics Type** | **Source** |  
 |------------|--------------|------------|  
-| **TCGA-BRCA** | Transcriptomics, Clinical | [GDC](https://portal.gdc.cancer.gov/) |  
-| **CPTAC** | Proteomics | [CPTAC Data Portal](https://cptac-data-portal.georgetown.edu/) |  
+| **Genomic Data Commons** | RNA-Seq (STAR-Counts), Clinical | [GDC](https://portal.gdc.cancer.gov/) |  
+| **Proteomic Data Commons** | Proteomics (Phosphoproteome, Acetylome) | [PDC](https://pdc.cancer.gov/) |  
 | **GTEx** | Normal Tissue Transcriptomics | [GTEx Portal](https://gtexportal.org/) |  
 
 ---
