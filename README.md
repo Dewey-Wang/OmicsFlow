@@ -3,7 +3,7 @@
 ## **📌 Overview**  
 **OmicsFlow** is a cloud-based bioinformatics platform designed for large-scale, automated, and reproducible multi-omics data analysis.  
 This platform integrates **RNA-Seq, metabolomics, proteomics**, and **AI-driven drug discovery** to:  
-
+ 
 ✅ **Predict cancer subtypes & identify potential drug targets**  
 ✅ **Analyze how multi-omics features impact patient survival**  
 ✅ **Leverage AI for drug-target prediction & molecular docking**  
