@@ -4,3 +4,5 @@
 __pycache__/
 omicsflow_env/
 .vscode/
+**/CPTAC2_Breast_Prospective_Collection_BI_Proteome.peptides.tsv
+**/breast_cptac_gdc.tar.gz
